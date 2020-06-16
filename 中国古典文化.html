@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-7" />
+<title>中国古典文化</title>
+
+<style type="text/css">
+
+body {text-align:center;}
+body{background-image:url("背景.jpg");
+background-attachment:fixed;
+background-repeat:no-repeat;}
+#navigation
+
+{ list-style-type:none; height:auto;}
+
+#navigation li { width:154px; height:40px; text-align:center;
+
+float:left;padding-top:18px;font-size:20px; font-family:"华文行楷", "宋体", "隶书";
+
+background-image:url(images/导航1.jpg);
+}
+
+a {width:154px; height:72px;}
+
+a:link { text-decoration:none; color:blue;}
+
+a:visited { text-decoration:none; color:blue; }
+
+#navigation li:hover { color:blue; text-decoration:nounderline;
+
+background-image:url(导航1.jpg);}
+
+a:hover{ color:blue;}
+
+#left {background-image:url(导航1.jpg); width:22px;}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<ul id="navigation">
+
+<li></li>
+
+<li><a href="中国古典文化.html">首页</a></li>
+
+<li><a href="文学.html">文学</a></li>
+
+<li><a href="戏曲.html">戏曲</a></li>
+
+<li><a href="节日.html">节日</a></li>
+
+<li><a href="武术.html">武术</a></li>
+
+<li><a href="饮食.html">饮食</a></li>
+
+
+
+<li><a href="问卷.html">联系我们</a></li>
+
+</ul>
+<br>
+   <script>
+        var timer=null;
+        function displayClock(num){//num是传入的startClock中的动态值
+            if(num<10){
+                return "0"+num;
+            }
+            else{
+                return num;    
+            }
+        }
+        //停止计时
+        function stopClock(){
+            clearTimeout(timer);
+        }
+        //开始计时
+        function startClock(){
+            var time =new Date();
+            var hours=displayClock(time.getHours())+":";
+            var minutes=displayClock(time.getMinutes())+":";
+            var seconds=displayClock(time.getSeconds());
+            //显示时间
+            show.innerHTML=hours+minutes+seconds;//在id为show的块区域显示
+            timer=setTimeout("startClock()",1000);//延时器
+        }
+    </script>
+<style>
+    #show{
+        font-size: 24px;
+        color:#842B00;
+        text-align:center;
+    }
+    </style>
+<body onload="startClock()" onunload="stopClock()">
+    <div id="show"></div>
+
+
+
+<style type="text/css">
+*{margin:0px auto; padding:0px;}
+#kuangjia
+{width:800px; height:500px; border:#F00 solid 1px; background-size:cover; position:fixed;clear:left;background-repeat:no-repeat;float:left;}
+.t1
+{width:40px; height:40px; background-repeat:no-repeat; background-size:contain; cursor:pointer;}
+#t2
+{float:left;clear:both; margin:100px 10px 0px 20px; background-image:url(zuo.png);}
+#t3
+{float:right; clear:both;margin:205px 20px 0px 0px; background-image:url(you.png);}
+</style>
+
+
+<div id="kuangjia"><!--大div作为框架-->
+    <div class="t1" id="t2" onclick="(dd(-1))"></div>
+    <div class="t1" id="t3" onclick="(dd(1))"></div>
+</div>
+<script>
+var jh=new Array();
+jh[0]="url(古典3.jpg)";
+jh[1]="url(古典5.jpg)";
+jh[2]="url(古典1.jpg)";
+jh[3]="url(古典2.jpg)";
+jh[4]="url(古典4.jpg)";
+
+var kj=document.getElementById("kuangjia");<!--获取框架div的标签，在下面进行更改背景-->
+var x=-1;<!--定义变量x，建立索引-->
+var l=jh.length;<!--获取集合中元素个数-->
+function lb()
+{
+    x++;
+    if (x==l)
+    {
+        x=0;
+    }
+    kj.style.backgroundImage=jh[x];
+    window.setTimeout("lb()",2000);<!--2s后再次播放集合中的图片-->
+}
+window.setTimeout("lb()",0);<!--开始进行轮播-->
+
+function dd(m)
+{
+    x=x+m;
+    if(x==l)    
+    {x=0;}
+    else if(x==-1)
+    {x=l;}
+    kj.style.backgroundImage=jh[x];
+}
+</script>
+
+
+
+<audio src="CHINA-X.mp3" autoplay="autoplay"></audio>
+
+<>
+<img src="动图1.png" align="right">
+<img src="动图1.png" align="right">
+<img src="动图1.png" align="right">
+<img src="动图1.png" align="right">
+<img src="动图1.png" align="right">
+<img src="动图1.png" align="right">
+<img src="动图1.png" align="right">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><p align="center"><font face="隶书" size="10" color="#A52A2A">品中国古典文化，传中国优良传统</font></p><br><br><br>
+
+<hr >
+
+</body>  
+
+</html>  
